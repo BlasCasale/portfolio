@@ -1,5 +1,33 @@
-.nav {
+.clearNav {
     display: none;
+}
+
+.darkNav {
+    display: none;
+}
+
+.clearBtnMode {
+    background-color: #403F4C;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+}
+
+.darkBtnMode {
+    background-color: #DEE7E7;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 25px;
+}
+
+.clearHeader {
+    background-color: #DEE7E7;
+}
+
+.darkHeader {
+    background-color: #403F4C;
 }
 
 .btn {
@@ -10,30 +38,23 @@
     border-radius: 20px;
 }
 
-.btnSession {
-    padding: 5px;
-    border: none;
-    border-radius: 15px;
-}
-
-.one {
-    background-color: #8A95A5;
+.clearOne {
+    background-color: #403F4C;
     color: #ccc;
     transition: 1s;
 }
 
-.one:hover {
-    background-color: #B9C6AE;
-    color: #090C08;
+.clearOne:hover {
+    background-color: #090C08;
 }
 
-.two {
+.clearTwo {
     background-color: #474056;
     color: #ccc;
     transition: 1s;
 }
 
-.two:hover {
+.clearTwo:hover {
     background-color: #090C08;
 }
 
@@ -49,13 +70,12 @@
     height: 50px;
 }
 
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 280px) {
     header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 20px 0px;
-        background-color: #474056;
         width: 100%;
     }
 
@@ -63,26 +83,26 @@
         list-style-type: none;
     }
 
-    .link {
-        color: #ccc;
-        text-decoration: none;
-        font-size: 30px;
-    }
-
-    .linkNav {
-        color: black;
+    .clearLink {
+        color: #090C08;
         font-size: 20px;
         text-decoration: none;
-    }
-
-    .btnSession {
-        background-color: #474056;
-        color: #ccc;
         transition: 1s;
     }
 
-    .btnSession:hover {
-        background-color: #090C08;
+    .clearLink:hover {
+        color: #474056;
+    }
+
+    .darkLink {
+        color: #ccc;
+        font-size: 20px;
+        text-decoration: none;
+        transition: 1s;
+    }
+
+    .darkLink:hover {
+        color: #fafafa;
     }
 
 }
@@ -96,7 +116,7 @@
         display: none;
     }
 
-    .navVisible {
+    .clearNavVisible {
         opacity: 1;
         visibility: visible;
         position: absolute;
@@ -108,7 +128,23 @@
         bottom: 0;
         top: 0;
         padding: 1.3rem;
-        background-color: #B9C6AE;
+        background-color: #DEE7E7;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5)
+    }
+
+    .darkNavVisible {
+        opacity: 1;
+        visibility: visible;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 10px;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        padding: 1.3rem;
+        background-color: #403F4C;
         box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5)
     }
 
@@ -126,7 +162,8 @@
         display: none;
     }
 
-    .nav {
+    .clearNav,
+    .darkNav {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -139,22 +176,11 @@
         gap: 20px;
     }
 
-    .linkNav {
-        color: #ccc;
-        transition: 1s;
-    }
-
-    .linkNav:hover {
-        color: white;
-    }
-
-    .btnSession {
-        background-color: #8A95A5;
-        transition: 1s;
-    }
-
-    .btnSession:hover {
-        background-color: #B9C6AE;
-        color: #090C08;
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
     }
 }

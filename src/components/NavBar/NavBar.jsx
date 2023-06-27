@@ -2,6 +2,7 @@ import React from 'react'
 import './NavBar.css'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import BtnDarkMode from './BtnDarkMode'
 
 const NavBar = ({ style, changeDarkMode }) => {
 
@@ -11,9 +12,9 @@ const NavBar = ({ style, changeDarkMode }) => {
 
     const active = "active"
 
-    const navOff = "nav"
+    const navOff = "Nav"
 
-    const navVisible = "navVisible"
+    const navVisible = "NavVisible"
 
     const [css, setCss] = useState({ ul: disable, buttonOpen: open, buttonClose: disable, nav: navOff })
 
@@ -38,17 +39,21 @@ const NavBar = ({ style, changeDarkMode }) => {
 
             </div>
 
-            <button onClick={() => openUl()} className={`${css.buttonOpen} btn one`}><i className="bi bi-list"></i></button>
 
-            <nav className={css.nav}>
-                <button onClick={() => changeDarkMode()}>Cambiar</button>
-                <button onClick={() => closeUl()} className={`${css.buttonClose} btn two`}><i className="bi bi-list"></i></button>
+            <button onClick={() => openUl()} className={`${css.buttonOpen} btn ${style}One`}><i className="bi bi-list"></i></button>
+
+            <nav className={`${style}${css.nav}`}>
+
+                <button onClick={() => closeUl()} className={`${css.buttonClose} btn ${style}Two`}><i className="bi bi-list"></i></button>
+
+                <BtnDarkMode changeDarkMode={changeDarkMode} style={style}/>
+
                 <ul className={`${css.ul} ul`}>
                     <li>
-                        <Link>Sobre mi</Link>
+                        <Link to={"/"} className={`${style}Link`}>Sobre mi</Link>
                     </li>
                     <li>
-                        <Link>Proyectos</Link>
+                        <Link to={"/proyects"} className={`${style}Link`}>Proyectos</Link>
                     </li>
                 </ul>
             </nav>

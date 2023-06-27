@@ -1,0 +1,13 @@
+tema claro
+
+#F4FAFF alice blue
+#DEE7E7 platinium
+#ccc blanco
+#fafafa crema
+#403F4C onix letras
+
+tema oscuro
+
+#ccc blanco letras
+#403F4C onix
+#02040F rich black
