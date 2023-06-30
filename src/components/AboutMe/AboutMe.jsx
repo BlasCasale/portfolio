@@ -6,7 +6,7 @@ const AboutMe = ({ style }) => {
   return (
     <main className={`${style}Main`}>
 
-      <img src="/public/1671500901722.webp" alt="Foto personal" />
+      <img src="/1671500901722.webp" alt="Foto personal" />
 
       <div>
         <h1 className={`${style}Name`}>Blas Casale</h1>
