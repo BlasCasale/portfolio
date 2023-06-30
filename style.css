@@ -2,3 +2,8 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  font-size: 67.5%;
+  font-family: 'Roboto', sans-serif;
+}

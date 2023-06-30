@@ -33,9 +33,9 @@ const NavBar = ({ style, changeDarkMode }) => {
 
                 <a href="https://github.com/BlasCasale" target='_blank'><img src="/gh.webp" alt="GitHub" /></a>
 
-                <a href="" target='_blank'><img src="/li.webp" alt="LinkedIn" /></a>
+                <a href="https://www.linkedin.com/in/blas-casale-987716259/" target='_blank'><img src="/li.webp" alt="LinkedIn" /></a>
 
-                <a href="" target='_blank'><img src="/wsp.webp" alt="WhatsApp" /></a>
+                <a href="https://wa.me/5492214097316?text=Hola%20Blas,%20revise%20tu%20portfolio%20y%20estoy%20interesado%20en%20contactarte%20de%20parte%20de%20..." target='_blank'><img src="/wsp.webp" alt="WhatsApp" /></a>
 
             </div>
 
@@ -46,7 +46,7 @@ const NavBar = ({ style, changeDarkMode }) => {
 
                 <button onClick={() => closeUl()} className={`${css.buttonClose} btn ${style}Two`}><i className="bi bi-list"></i></button>
 
-                <BtnDarkMode changeDarkMode={changeDarkMode} style={style}/>
+                <BtnDarkMode changeDarkMode={changeDarkMode} style={style} />
 
                 <ul className={`${css.ul} ul`}>
                     <li>

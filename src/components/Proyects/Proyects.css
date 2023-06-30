@@ -1,0 +1,91 @@
+section ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 0px;
+}
+
+section ul li {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    border-radius: 50px;
+    width: 260px;
+    height: 290px;
+}
+
+section ul li div {
+    display: flex;
+    gap: 20px;
+}
+
+section ul li a {
+    text-decoration: none;
+}
+
+.clearLi {
+    border: 2px #02040F solid;
+    transition: 1s;
+}
+
+.darkLi {
+    border: 2px #DEE7E7 solid;
+    transition: 1;
+}
+
+.iconCustom {
+    font-size: 4rem;
+    color: #090C08;
+    transition: 1s;
+}
+
+.iconCustom:hover {
+    color: #ccc;
+}
+
+.sectionProyects {
+    transition: 1s;
+}
+
+.mundoRjs {
+    background-image: url("/public/mundoRjs.webp");
+}
+
+.warshipsApi {
+    background-image: url("/public/warships.webp");
+}
+
+.toDo {
+    background-image: url("/public/toDo.webp");
+}
+
+.quizzApp {
+    background-image: url("/public/quizzApp.webp");
+}
+
+.simpsons {
+    background-image: url("/public/simpsons.webp");
+}
+
+.mundoJs {
+    background-image: url("/public/mundoJs.webp");
+}
+
+.slipknot {
+    background-image: url("/public/slipknot.webp");
+}
+
+.clearProyects {
+    background-color: #F4FAFF;
+}
+
+.darkProyects {
+    background-color: #02040F;
+}
