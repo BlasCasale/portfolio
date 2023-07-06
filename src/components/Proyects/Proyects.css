@@ -18,7 +18,16 @@ section ul li {
     gap: 15px;
     border-radius: 50px;
     width: 260px;
-    height: 290px;
+    height: 330px;
+}
+
+section ul li p {
+    font-size: 1.8rem;
+    width: 240px;
+    padding: 7px;
+    border-radius: 30px;
+    text-align: center;
+    transition: 1s;
 }
 
 section ul li div {
@@ -38,6 +47,16 @@ section ul li a {
 .darkLi {
     border: 2px #DEE7E7 solid;
     transition: 1;
+}
+
+.clearP {
+    background-color: #DEE7E7;
+    color: #090C08;
+}
+
+.darkP {
+    background-color: #02040F;
+    color: #ccc;
 }
 
 .iconCustom {

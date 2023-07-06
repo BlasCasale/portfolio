@@ -67,11 +67,13 @@ footer i a {
 @media screen and (min-width: 260px) {
     footer {
         width: 80%;
+        padding: 10px 10px;
     }
 }
 
 @media screen and (min-width: 600px) {
     footer {
         width: 460px;
+        padding: 10px 0px;
     }
 }
