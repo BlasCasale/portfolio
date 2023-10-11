@@ -1,3 +1,11 @@
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    gap: 30px;
+    transition: 1s;
+}
+
 section ul {
     display: flex;
     flex-wrap: wrap;
@@ -18,7 +26,7 @@ section ul li {
     gap: 15px;
     border-radius: 50px;
     width: 260px;
-    height: 330px;
+    height: 360px;
 }
 
 section ul li p {
@@ -37,6 +45,18 @@ section ul li div {
 
 section ul li a {
     text-decoration: none;
+}
+
+svg {
+    transition: 1s;
+}
+
+.clearTitle {
+    color: #090C08;
+}
+
+.darkTitle {
+    color: #ccc;
 }
 
 .clearLi {
@@ -59,18 +79,44 @@ section ul li a {
     color: #ccc;
 }
 
-.iconCustom {
-    font-size: 4rem;
-    color: #090C08;
+.divContainer {
+    padding: 5px;
+    border-radius: 50px;
     transition: 1s;
 }
 
-.iconCustom:hover {
+.clearProyectsIcons {
+    background-color: #DEE7E7;
+    color: #090C08;
+}
+
+.darkProyectsIcons {
+    background-color: #02040F;
     color: #ccc;
 }
 
-.sectionProyects {
+.clearColor {
+    color: #090C08;
+}
+
+.darkColor {
+    color: #ccc;
+}
+
+.iconCustom {
+    font-size: 4rem;
     transition: 1s;
+}
+
+.titleProyects {
+    text-align: center;
+    font-size: 3rem;
+    transition: 1s;
+}
+
+
+.pelisPedia {
+    background-image: url("/public/pelisPedia.webp");
 }
 
 .mundoRjs {
