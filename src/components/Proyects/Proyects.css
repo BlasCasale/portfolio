@@ -114,6 +114,9 @@ svg {
     transition: 1s;
 }
 
+.portfolio {
+    background-image: url('/public/portfolio.webp');
+}
 
 .pelisPedia {
     background-image: url("/public/pelisPedia.webp");

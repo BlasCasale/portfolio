@@ -4,7 +4,7 @@ import './NavBar.css'
 const BtnDarkMode = ({ changeDarkMode, style }) => {
 
     return (
-        <button onClick={() => changeDarkMode()} className={`${style}BtnMode`}>{style === "dark" ?
+        <button onClick={() => changeDarkMode()} className={`${style}BtnMode btnMode`}>{style === "dark" ?
             <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-sun-high" width="37" height="37" viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50" fill="none" strokeLinecap="round" strokeLinejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M14.828 14.828a4 4 0 1 0 -5.656 -5.656a4 4 0 0 0 5.656 5.656z" />

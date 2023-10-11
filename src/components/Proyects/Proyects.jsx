@@ -14,6 +14,11 @@ const Proyects = ({ style }) => {
       <h2 className={`${style}Title titleProyects`}>Mis proyectos</h2>
 
       <ul>
+        <li className={`${style}Li portfolio`}>
+          <p className={`${style}P`}>Portfolio personal</p>
+          <CodeAndDeploy code={'https://github.com/BlasCasale/portfolio'} deploy={'https://portfolio-casale.netlify.app/'} style={style} />
+          <ReactJs style={style} />
+        </li>
         <li className={`${style}Li pelisPedia`}>
           <p className={`${style}P`}>Backend de PelisPedia</p>
           <p className={`${style}P`}>Backend hecho con express, SQL, postgres, Sequelize y Node.js. Es una base de datos relacional.</p>
