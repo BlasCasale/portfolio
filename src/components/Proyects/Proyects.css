@@ -118,6 +118,10 @@ svg {
     background-image: url('/public/portfolio.webp');
 }
 
+.vamosAPasear {
+    background-image: url('/public/vamosApasear.webp');
+}
+
 .pelisPedia {
     background-image: url("/public/pelisPedia.webp");
 }

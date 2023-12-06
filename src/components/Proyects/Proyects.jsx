@@ -19,6 +19,19 @@ const Proyects = ({ style }) => {
           <CodeAndDeploy code={'https://github.com/BlasCasale/portfolio'} deploy={'https://portfolio-casale.netlify.app/'} style={style} />
           <ReactJs style={style} />
         </li>
+
+        <li className={`${style}Li vamosAPasear`}>
+          <p className={`${style}P`}>Backend de Vamos a pasear</p>
+          <CodeAndDeploy code={'https://github.com/BlasCasale/placesToVisitBackend'} style={style} deploy={'https://vamos-a-pasear.netlify.app/'} />
+          <NodeSQL style={style} />
+        </li>
+
+        <li className={`${style}Li vamosAPasear`}>
+          <p className={`${style}P`}>Frontend de Vamos a pasear</p>
+          <CodeAndDeploy code={'https://github.com/BlasCasale/placesToVisitFront'} style={style} deploy={'https://vamos-a-pasear.netlify.app/'} />
+          <ReactRedux style={style} />
+        </li>
+
         <li className={`${style}Li pelisPedia`}>
           <p className={`${style}P`}>Backend de PelisPedia</p>
           <p className={`${style}P`}>Backend hecho con express, SQL, postgres, Sequelize y Node.js. Es una base de datos relacional.</p>
