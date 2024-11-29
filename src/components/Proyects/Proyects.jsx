@@ -6,10 +6,13 @@ import HtmlAndCss from './Icons/HtmlAndCss'
 import ReactRedux from './Icons/ReactRedux'
 import NodeSQL from './Icons/NodeSQL'
 import './Proyects.css'
+import Skills from '../Skills/Skills'
 
 const Proyects = ({ style }) => {
   return (
     <section className={`${style}Proyects`}>
+
+      <Skills style={style} />
 
       <h2 className={`${style}Title titleProyects`}>Mis proyectos</h2>
 
