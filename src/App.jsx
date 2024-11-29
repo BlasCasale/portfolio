@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import { useState } from "react"
+import { useCallback, useState } from "react"
 import '../style.css'
 import NavBar from "./components/NavBar/NavBar"
 import AboutMe from "./components/AboutMe/AboutMe"
@@ -12,7 +12,7 @@ export const App = () => {
 
     const style = darkMode ? "dark" : "clear"
 
-    const changeDarkMode = () => setDarkMode(!darkMode)
+    const changeDarkMode = useCallback(() => setDarkMode(!darkMode))
 
     return (
         <>

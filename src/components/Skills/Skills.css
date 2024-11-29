@@ -1,0 +1,36 @@
+@media screen and (min-width: 300px) {
+  .sectionSkills {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .clearSelected {
+    stroke: #ccc;
+  }
+
+  .darkSelected {
+    stroke: #090C08;
+  }
+
+  .liSkills {
+    transition: 0.7s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border-radius: 25px;
+  }
+
+  .liClearSelected {
+    background-color: #090C08;
+  }
+
+  .liDarkSelected {
+    background-color: #DEE7E7;
+  }
+}

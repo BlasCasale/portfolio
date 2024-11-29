@@ -1,0 +1,6 @@
+.ulTechs {
+  display: flex;
+  gap: 7px;
+  justify-content: center;
+  align-items: center;
+}

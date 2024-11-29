@@ -1,12 +1,14 @@
-section {
+.sectionProjects {
     display: flex;
     flex-direction: column;
     padding: 20px 0px;
     gap: 30px;
     transition: 1s;
+    justify-content: center;
+    align-items: center;
 }
 
-section ul {
+.ulProjects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -15,7 +17,7 @@ section ul {
     padding: 30px 0px;
 }
 
-section ul li {
+.liProjects {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,7 +31,7 @@ section ul li {
     height: 360px;
 }
 
-section ul li p {
+.pProjects {
     font-size: 1.8rem;
     width: 240px;
     padding: 7px;
@@ -38,12 +40,12 @@ section ul li p {
     transition: 1s;
 }
 
-section ul li div {
+.divProjects {
     display: flex;
     gap: 20px;
 }
 
-section ul li a {
+.anchorProjects {
     text-decoration: none;
 }
 
@@ -69,13 +71,11 @@ svg {
     transition: 1;
 }
 
-.clearP {
-    background-color: #DEE7E7;
+.clearH3, .clearP {
     color: #090C08;
 }
 
-.darkP {
-    background-color: #02040F;
+.darkH3, .darkP {
     color: #ccc;
 }
 
@@ -101,6 +101,14 @@ svg {
 
 .darkColor {
     color: #ccc;
+}
+
+.icon {
+    transition: 0.7s;
+}
+
+.icon:hover {
+    scale: 1.1;
 }
 
 .iconCustom {
