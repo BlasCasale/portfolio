@@ -1,96 +1,55 @@
-import React from 'react'
-import ReactJs from './Icons/ReactJs'
-import CodeAndDeploy from './Icons/CodeAndDeploy'
-import JavaScript from './Icons/JavaScript'
-import HtmlAndCss from './Icons/HtmlAndCss'
-import ReactRedux from './Icons/ReactRedux'
-import NodeSQL from './Icons/NodeSQL'
-import './Proyects.css'
+import React, { useCallback, useState } from 'react'
 import Skills from '../Skills/Skills'
+import HTML from '../Skills/HMTL/HTML'
+import CSS from '../Skills/CSS/CSS'
+import JS from '../Skills/JS/JS'
+import Node from '../Skills/Node/Node'
+import ReactJs from '../Skills/ReactJs/ReactJs'
+import Redux from '../Skills/Redux/Redux'
+import SQL from '../Skills/SQL/SQL'
+import Project from '../Project/Project'
+import { projects } from '../../projects'
+import './Proyects.css'
 
 const Proyects = ({ style }) => {
-  return (
-    <section className={`${style}Proyects`}>
 
-      <Skills style={style} />
+  const skills = [
+    { component: HTML, id: 'html' },
+    { component: CSS, id: 'css' },
+    { component: JS, id: 'js' },
+    { component: Node, id: 'node' },
+    { component: Redux, id: 'redux' },
+    { component: ReactJs, id: 'react' },
+    { component: SQL, id: 'sql' },
+  ]
+
+  const [selected, setSelected] = useState([])
+
+  const addSkill = useCallback((id) => {
+    setSelected((prev) => [
+      ...prev,
+      id
+    ])
+  }, [selected])
+
+  const quiteSkill = useCallback((id) => {
+    const fillteredSkills = selected.filter((skill) => skill !== id)
+
+    setSelected(fillteredSkills)
+  }, [selected])
+
+  const filteredProjects = !selected.length ? projects : projects.filter(({ techs }) => selected.every((tech) => techs.includes(tech)))
+
+  return (
+    <section className={`${style}Proyects sectionProjects`}>
+
+      <Skills style={style} skills={skills} selected={selected} addSkill={addSkill} quiteSkill={quiteSkill} />
 
       <h2 className={`${style}Title titleProyects`}>Mis proyectos</h2>
 
-      <ul>
-        <li className={`${style}Li portfolio`}>
-          <p className={`${style}P`}>Portfolio personal</p>
-          <CodeAndDeploy code={'https://github.com/BlasCasale/portfolio'} deploy={'https://portfolio-casale.netlify.app/'} style={style} />
-          <ReactJs style={style} />
-        </li>
-
-        <li className={`${style}Li vamosAPasear`}>
-          <p className={`${style}P`}>Backend de Vamos a pasear</p>
-          <CodeAndDeploy code={'https://github.com/BlasCasale/placesToVisitBackend'} style={style} deploy={'https://vamos-a-pasear.netlify.app/'} />
-          <NodeSQL style={style} />
-        </li>
-
-        <li className={`${style}Li vamosAPasear`}>
-          <p className={`${style}P`}>Frontend de Vamos a pasear</p>
-          <CodeAndDeploy code={'https://github.com/BlasCasale/placesToVisitFront'} style={style} deploy={'https://vamos-a-pasear.netlify.app/'} />
-          <ReactRedux style={style} />
-        </li>
-
-        <li className={`${style}Li pelisPedia`}>
-          <p className={`${style}P`}>Backend de PelisPedia</p>
-          <p className={`${style}P`}>Backend hecho con express, SQL, postgres, Sequelize y Node.js. Es una base de datos relacional.</p>
-          <CodeAndDeploy code={'https://github.com/BlasCasale/pelisPedia'} style={style} deploy={'https://pelis-pedia.netlify.app/'} />
-          <NodeSQL style={style} />
-        </li>
-
-        <li className={`${style}Li pelisPedia`}>
-          <p className={`${style}P`}>Frontend de PelisPedia</p>
-          <p className={`${style}P`}>PelisPedia es un proyecto donde podes buscar tus pelis favoritas, guardarlas en favoritos y consultar tus favoritos.</p>
-          <CodeAndDeploy code={'https://github.com/BlasCasale/pelisPediaFront'} style={style} deploy={'https://pelis-pedia.netlify.app/'} />
-          <ReactRedux style={style} />
-        </li>
-
-        <li className={`${style}Li mundoRjs`}>
-          <p className={`${style}P`}>E-commerce hecho con React JS y utilizando base de datos de Firebase.</p>
-          <CodeAndDeploy code={'https://github.com/BlasCasale/proyecto-rjs'} style={style} deploy={'https://mundo-gamer-rjs-casale.netlify.app/'} />
-          <ReactJs style={style} />
-        </li>
-
-        <li className={`${style}Li warshipsApi`}>
-          <p className={`${style}P`}>Fetching de datos, maquetación y navegación con recuperación de datos con React JS.</p>
-          <CodeAndDeploy code={'https://github.com/BlasCasale/warships-api'} style={style} deploy={'https://warships-api-casale.netlify.app/'} />
-          <ReactJs style={style} />
-        </li>
-
-        <li className={`${style}Li toDo`}>
-          <p className={`${style}P`}>Clásico To Do hecho con React JS, utilizando el recurso de localStorage para que tus tareas se guarden.</p>
-          <CodeAndDeploy code={'https://github.com/BlasCasale/to-do-task'} style={style} deploy={'https://to-do-task-casale.netlify.app/'} />
-          <ReactJs style={style} />
-        </li>
-
-        <li className={`${style}Li quizzApp`}>
-          <p className={`${style}P`}>Un Quizz App de preguntas de cultura general, hecho con React JS, utilizando la librería de confeti para agregar animación a ciertos puntaje obtenido.</p>
-          <CodeAndDeploy code={'https://github.com/BlasCasale/quiz-app'} style={style} deploy={'https://quizz-app-casale.netlify.app/'} />
-          <ReactJs />
-        </li>
-
-        <li className={`${style}Li simpsons`}>
-          <p className={`${style}P`}>Fetching de datos a la Api de los simpsons, maquetación con React JS, se puede hacer doble busqueda tanto por nombre como por numero de simpsons.</p>
-          <CodeAndDeploy code={'https://github.com/BlasCasale/simpsons-api'} style={style} deploy={'https://simpsons-api-casale.netlify.app/'} />
-          <ReactJs style={style} />
-        </li>
-
-        <li className={`${style}Li mundoJs`}>
-          <p className={`${style}P`}>E-commerce hecho con HTML5, CSS3 y JavaScript, utilizando localStorage para poder mantener el carrito guardado cuando se navega entre páginas.</p>
-          <CodeAndDeploy code={'https://github.com/BlasCasale/projectoJS'} style={style} deploy={'https://blascasale.github.io/projectoJS/'} />
-          <JavaScript style={style} />
-        </li>
-
-        <li className={`${style}Li slipknot`}>
-          <p className={`${style}P`}>Primer proyecto personal y académico, hecho con HTML5 y CSS3.</p>
-          <CodeAndDeploy code={'https://github.com/BlasCasale/PreEntregaCasale'} style={style} deploy={'https://slipknotcodercasale.netlify.app/'} />
-          <HtmlAndCss style={style} />
-        </li>
-      </ul>
+      {
+        filteredProjects.map((project) => <Project style={style} {...project} key={project.id} />)
+      }
     </section>
   )
 }

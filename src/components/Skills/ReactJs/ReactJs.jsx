@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ReactJs = ({ style }) => {
+const ReactJs = ({ style, addSkill = null, quiteSkill = null, itsSelected = null, id = null }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-brand-react" width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke={style == "dark" ? "#ccc" : "#090C08"} fill="none" strokeLinecap="round" strokeLinejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" className={`icon icon-tabler icon-tabler-brand-react ${itsSelected && style + "Selected"}`} width="44" height="44" viewBox="0 0 24 24" strokeWidth="1.5" stroke={style == "dark" ? "#ccc" : "#090C08"} fill="none" strokeLinecap="round" strokeLinejoin="round" onClick={itsSelected ? () => quiteSkill(id) : () => addSkill(id)}>
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M6.306 8.711c-2.602 .723 -4.306 1.926 -4.306 3.289c0 2.21 4.477 4 10 4c.773 0 1.526 -.035 2.248 -.102" />
       <path d="M17.692 15.289c2.603 -.722 4.308 -1.926 4.308 -3.289c0 -2.21 -4.477 -4 -10 -4c-.773 0 -1.526 .035 -2.25 .102" />
