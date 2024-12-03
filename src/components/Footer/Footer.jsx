@@ -10,7 +10,7 @@ const Footer = ({ style }) => {
 
                 <i className={`bi bi-geo-alt ${style}Info`}> Argentina, Buenos Aires, La Plata.</i>
 
-                <i className={`bi bi-file-earmark-arrow-down ${style}Info`}><a href="https://docs.google.com/document/d/1y0p5DKsRh4Ks1rncFnn-ZjaE2aZbFM2A_w5vTXDTl_w/edit?usp=drive_link" target='_blank'>CV</a></i>
+                <i className={`bi bi-file-earmark-arrow-down ${style}Info`}><a href="https://docs.google.com/document/d/11DTRRpC1kLbpK8nh0RPx_iIY0CNB357W2mCO-YH-qAY/edit?usp=drive_link" target='_blank'>CV</a></i>
 
             </footer>
         </div>
