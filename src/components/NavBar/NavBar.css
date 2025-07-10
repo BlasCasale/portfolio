@@ -186,3 +186,8 @@
         gap: 20px;
     }
 }
+
+.btnLanguage {
+    border: none;
+    background: none;
+}

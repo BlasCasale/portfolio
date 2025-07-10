@@ -11,7 +11,7 @@ import Project from '../Project/Project'
 import { projects } from '../../projects'
 import './Proyects.css'
 
-const Proyects = ({ style }) => {
+const Proyects = ({ style, language }) => {
 
   const skills = [
     { component: HTML, id: 'html' },
@@ -48,7 +48,7 @@ const Proyects = ({ style }) => {
       <h2 className={`${style}Title titleProyects`}>Mis proyectos</h2>
 
       {
-        filteredProjects.map((project) => <Project style={style} {...project} key={project.id} />)
+        filteredProjects.map((project) => <Project language={language} style={style} {...project} key={project.id} />)
       }
     </section>
   )
