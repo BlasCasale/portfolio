@@ -1,4 +1,3 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useCallback, useState } from "react"
 import '../style.css'
 import NavBar from "./components/NavBar/NavBar"
@@ -8,6 +7,10 @@ import Proyects from "./components/Proyects/Proyects"
 
 export const App = () => {
 
+    const [language, setLanguage] = useState('es')
+
+    const changeLanguage = useCallback(() => setLanguage(language === 'es' ? 'en' : 'es'))
+
     const [darkMode, setDarkMode] = useState(false)
 
     const style = darkMode ? "dark" : "clear"
@@ -16,14 +19,10 @@ export const App = () => {
 
     return (
         <>
-            <BrowserRouter>
-                <NavBar style={style} changeDarkMode={changeDarkMode} />
-                <Routes>
-                    <Route path="/" element={<AboutMe style={style} />} />
-                    <Route path="/proyects" element={<Proyects style={style} />} />
-                </Routes>
-                <Footer style={style} />
-            </BrowserRouter>
+            <NavBar style={style} changeDarkMode={changeDarkMode} changeLanguage={changeLanguage} language={language} />
+            <section id="aboutMe"><AboutMe style={style} language={language} /></section>
+            <section id="projects"><Proyects style={style} language={language} /></section>
+            <Footer style={style} />
         </>
     )
 }

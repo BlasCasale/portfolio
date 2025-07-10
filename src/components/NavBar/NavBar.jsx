@@ -1,10 +1,11 @@
 import React from 'react'
 import './NavBar.css'
-import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import BtnDarkMode from './BtnDarkMode'
+import Languages from './Languages'
+import { translation } from '../../translation'
 
-const NavBar = ({ style, changeDarkMode }) => {
+const NavBar = ({ style, changeDarkMode, changeLanguage, language }) => {
 
     const open = "open"
 
@@ -48,12 +49,14 @@ const NavBar = ({ style, changeDarkMode }) => {
 
                 <BtnDarkMode changeDarkMode={changeDarkMode} style={style} />
 
+                <Languages changeLanguage={changeLanguage} language={language} />
+
                 <ul className={`${css.ul} ul`}>
                     <li>
-                        <Link to={"/"} className={`${style}Link`}>Sobre mi</Link>
+                        <a href="#aboutMe" className={`${style}Link`}>{translation[language].nav.aboutMe}</a>
                     </li>
                     <li>
-                        <Link to={"/proyects"} className={`${style}Link`}>Proyectos</Link>
+                        <a href="#projects" className={`${style}Link`}>{translation[language].nav.projects}</a>
                     </li>
                 </ul>
             </nav>
